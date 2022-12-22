@@ -8,7 +8,7 @@
   //enquanto houver registros
   while(!feof($arquivo)){//testa o fim de um arquivo end of file//retorna true se chegar ao final do arquivo
     $registro = fgets($arquivo);//recuperar tudo na linha ou ate a quebra de linha especificada
-    //$chamados[] = $registro;
+    
     $chamado_dados = explode('#', $registro);
 
     if($_SESSION['perfil_id'] == 2) {

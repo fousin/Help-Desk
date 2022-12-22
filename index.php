@@ -77,21 +77,21 @@
           </div>
           <div class="modal-body">
             
-            <form action="cria_usuario.php" method="post">
+            <form action="cria_usuario_comum.php" method="post">
               <div class="form-group">
                 <label for="">Email</label>
                 <input name="emailCadastro" type="email" class="form-control" placeholder="E-mail">
               </div>
               <div class="form-group">
                 <label for="">Senha</label>
-                <input name="emailCadastro" type="password" class="form-control" placeholder="Senha">
+                <input name="senhaCadastro" type="password" class="form-control" placeholder="Senha">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
               </div>
             </form>
            
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
           </div>
         </div>
       </div>
