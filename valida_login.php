@@ -2,12 +2,12 @@
     session_start();
     require('banco_user.php');
 
-    //verifica a autenticaçao do usuario 
     $usuario_autenticado = false;
     $usuario_id = null;
     $usuario_perfil_id = null;
     $perfis = array(1=>'Administrativo', 2 =>'Usuário');
 
+    //verifica a autenticaçao do usuario
     foreach($banco_dados as $user){
         
         if($user[1] == $_POST['email'] && $user[2] == $_POST['senha']){
