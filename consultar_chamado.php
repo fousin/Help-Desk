@@ -3,7 +3,7 @@
 
   $chamados = [];
 
-  $arquivo = fopen('arquivo.hd', 'r');
+  $arquivo = fopen('data/arquivo.hd', 'r');
 
   //enquanto houver registros
   while(!feof($arquivo)){//testa o fim de um arquivo end of file//retorna true se chegar ao final do arquivo

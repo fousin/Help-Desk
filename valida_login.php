@@ -7,14 +7,15 @@
     $usuario_id = null;
     $usuario_perfil_id = null;
     $perfis = array(1=>'Administrativo', 2 =>'Usuário');
-
     
-    foreach($banco_dados as $user){
 
-        if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']){
+    foreach($banco_dados as $user){
+            
+        if($user[1] == $_POST['email'] && $user[2] == $_POST['senha']){
+            
             $usuario_autenticado = true;
-            $usuario_id = $user['id'];
-            $usuario_perfil_id = $user['perfil_id'];
+            $usuario_id = $user[0];
+            $usuario_perfil_id = $user[3];
         }
 
     }
@@ -24,11 +25,10 @@
         $_SESSION['autenticado']='SIM';
         $_SESSION['id'] = $usuario_id;
         $_SESSION['perfil_id'] = $usuario_perfil_id;
-        //header('Location: home.php?');
-
+        header('Location: home.php?sucess');
     }else{
         $_SESSION['autenticado']='NAO';
-        //header('Location: index.php?login=erro');
+        header('Location: index.php?login=erro');
         
     }
 
