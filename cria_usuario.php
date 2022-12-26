@@ -22,48 +22,73 @@
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
+        App Registro de Chamado
       </a>
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="logoff.php">Sair</a></li>
       </ul>
     </nav>
 
-    <div class="container">    
-        <div class="row">
-            <div class="card-home">
-                <div class="card">
-                    <div class="card-header">
-                        Criação de Usuario
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <form action="cria_usuario_comum.php" method="post">
-                                <div class="row">
-                                    <div class="form-group col-4">
-                                        <label for="">Email</label>
-                                        <input name="emailCadastro" type="email" class="form-control" placeholder="E-mail">
-                                    </div>
-
-                                    <div class="form-group  col-4">
-                                        <label for="">Senha</label>
-                                        <input name="senhaCadastro" type="password" class="form-control" placeholder="Senha" >
-                                    </div>
-                                    
-                                    <div class="form-group col-4">
-                                        <label  for="#adm">Administrador</label>
-                                        <input id="adm" type="radio">
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                </div>
-                            </form>
-                            
-                        </div>
-                    </div>
-                </div>
+    <div class="container col-6">    
+      <div class="row">
+        <div class="card-home">
+          <div class="card">
+            <div class="card-header">
+              Criação de Usuario
             </div>
+            <div class="card-body">
+              <div class="row  justify-content-center align-items-center">
+                <form action="cria_usuario_comum.php" method="post">
+                  <div class="row">
+                    <div class="form-group col-4">
+                      <label for="">Email</label>
+                      <input name="emailCadastro" type="email" class="form-control" placeholder="E-mail">
+                    </div>
+                    
+                    <div class="form-group  col-4">
+                      <label for="">Senha</label>
+                      <input name="senhaCadastro" type="password" class="form-control" placeholder="Senha" >
+                    </div>
+                    
+                    <div class="form-group col-4">
+                      <br>
+                      <input id="adm" name="adm" type="radio">
+                      <label  for="adm">Administrador</label>
+                      <br>
+                      <input id="adm" name="adm" type="radio" checked>
+                      <label  for="adm">Comum</label>
+                        
+                    </div>
+
+                      
+                  </div>
+
+                  <?php if( isset($_GET['cod']) && $_GET['cod']=='campovazio'){ ?>
+                    <div class='text-danger'>
+                      Por favor, preencha todos os campos
+                    </div>
+                  <?php } ?>
+                  
+                  <?php if( isset($_GET['cod']) && $_GET['cod']=='emailUser'){ ?>
+                    <div class='text-danger'>
+                      Email Já cadastrado
+                    </div>
+                  <?php } ?>
+
+                  <?php if( isset($_GET['cod']) && $_GET['cod']=='success'){ ?>
+                    <div class='text-success'>
+                      Cadastro realizado com sucesso
+                    </div>
+                  <?php } ?>
+
+                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+              
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </body>
 </html>

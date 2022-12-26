@@ -11,8 +11,6 @@
     foreach($banco_dados as $user){
         
         if($user[1] == $_POST['email'] && $user[2] == $_POST['senha']){
-            echo '<hr>';
-            echo 'passou aqui';
             $usuario_autenticado = true;
             $usuario_id = $user[0];
             $usuario_perfil_id = $user[3];
