@@ -9,11 +9,11 @@
     $texto = $_SESSION['id'] . '#' . $titulo . '#'. $categoria . '#' . $descricao . PHP_EOL;
 
     //abrindo arquivo
-    $arquivo = fopen('data/arquivo.hd', 'a'); //referencia do arquivo aberto
+    $arquivo = fopen('../data/arquivo.hd', 'a'); //referencia do arquivo aberto
     //escrevendo o texto
     fwrite($arquivo, $texto);
     //fechando arquivo
     fclose($arquivo);
-    header('Location: abrir_chamado.php')
+    header('Location: ../view/abrir_chamado.php')
     //echo $texto;
 ?>

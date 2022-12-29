@@ -1,9 +1,9 @@
 <?php 
-  require_once("validador_acesso.php");
+  require_once("../controller/validador_acesso.php");
 
   $chamados = [];
 
-  $arquivo = fopen('data/arquivo.hd', 'r');
+  $arquivo = fopen('../data/arquivo.hd', 'r');
 
   //enquanto houver registros
   while(!feof($arquivo)){//testa o fim de um arquivo end of file//retorna true se chegar ao final do arquivo
@@ -49,11 +49,11 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="home.php">
-        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="logoff.php">Sair</a></li>
+        <li class="nav-item"><a class="nav-link" href="../controller/logoff.php">Sair</a></li>
       </ul>
     </nav>
 

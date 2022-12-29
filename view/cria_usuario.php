@@ -1,6 +1,4 @@
-<?php 
-  require_once("validador_acesso.php");
-?>
+<?php require_once("../controller/validador_acesso.php"); ?>
 
 <html>
   <head>
@@ -20,12 +18,12 @@
 
   <body>
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <a class="navbar-brand" href="home.php">
+        <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Registro de Chamado
       </a>
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="logoff.php">Sair</a></li>
+        <li class="nav-item"><a class="nav-link" href="../controller/logof.php">Sair</a></li>
       </ul>
     </nav>
 
