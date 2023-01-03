@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>App Help Desk</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 
     <style>
       .card-home {
@@ -53,7 +53,7 @@
                       <input id="adm" name="adm" type="radio" value="adm" autocomplete="off">
                       <label  for="adm">Administrador</label>
                       <br>
-                      <input id="commum" name="adm" type="radio" value="commum" autocomplete="off">
+                      <input id="commum" name="adm" type="radio" value="commum" autocomplete="off" checked>
                       <label  for="adm">Comum</label>
                         
                     </div>
@@ -88,5 +88,8 @@
         </div>
       </div>
     </div>
+    
+    <!--bootstrap scripts-->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js" ></script>
   </body>
 </html>

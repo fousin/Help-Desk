@@ -1,10 +1,10 @@
 <?php
-    function cadastro(){
+    function cadastro($id){
         //criando texto/dados do usuario
         if($_POST['adm']=='adm'){
-            $texto = PHP_EOL . 5 . '#' .  $_POST['emailCadastro'] . '#' . $_POST['senhaCadastro'] . '#' . 1 ;
+            $texto = PHP_EOL . $id . '#' .  $_POST['emailCadastro'] . '#' . $_POST['senhaCadastro'] . '#' . 1 ;
         }else{
-            $texto = PHP_EOL . 5 . '#' .  $_POST['emailCadastro'] . '#' . $_POST['senhaCadastro'] . '#' . 2 ;
+            $texto = PHP_EOL . $id . '#' .  $_POST['emailCadastro'] . '#' . $_POST['senhaCadastro'] . '#' . 2 ;
         }
         //abrindo arquivo
         $arquivo = fopen('../data/banco.bd', 'a'); //referencia do arquivo aberto
@@ -14,7 +14,7 @@
         fclose($arquivo);
     }
     $cadastro = true;
-
+    $newId = 0;
     if($_POST['emailCadastro'] == '' || $_POST['senhaCadastro'] == ''){
         header('Location: ../view/cria_usuario.php?cod=campovazio');
     } else{
@@ -32,12 +32,15 @@
                 header('Location: ../view/cria_usuario.php?cod=emailUser'); 
                 $cadastro = false;
             }
+            if($newId < $dado[0]){
+                $newId = $dado[0];
+            }
         }
-        
     }
 
     if($cadastro){
-        cadastro();
+        $newId++;
+        cadastro($newId);
         header('Location: ../view/cria_usuario.php?cod=success');
     }
 
