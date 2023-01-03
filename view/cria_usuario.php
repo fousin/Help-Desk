@@ -20,10 +20,10 @@
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="home.php">
         <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Registro de Chamado
+        App Registro Chamado
       </a>
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="../controller/logof.php">Sair</a></li>
+        <li class="nav-item"><a class="nav-link" href="../controller/logoff.php">Sair</a></li>
       </ul>
     </nav>
 
@@ -36,7 +36,7 @@
             </div>
             <div class="card-body">
               <div class="row  justify-content-center align-items-center">
-                <form action="cria_usuario_comum.php" method="post">
+                <form action="../controller/cria_usuario_comum.php" method="post">
                   <div class="row">
                     <div class="form-group col-4">
                       <label for="">Email</label>
@@ -50,10 +50,10 @@
                     
                     <div class="form-group col-4">
                       <br>
-                      <input id="adm" name="adm" type="radio">
+                      <input id="adm" name="adm" type="radio" value="adm" autocomplete="off">
                       <label  for="adm">Administrador</label>
                       <br>
-                      <input id="adm" name="adm" type="radio" checked>
+                      <input id="commum" name="adm" type="radio" value="commum" autocomplete="off">
                       <label  for="adm">Comum</label>
                         
                     </div>

@@ -1,5 +1,5 @@
 <?php
-    $arquivo = fopen('../data/banco.ban', 'r');
+    $arquivo = fopen('../data/banco.bd', 'r');
     $banco_dados = array();
     
     //enquanto houver registros
