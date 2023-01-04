@@ -55,10 +55,8 @@
                       <br>
                       <input id="commum" name="adm" type="radio" value="commum" autocomplete="off" checked>
                       <label  for="adm">Comum</label>
-                        
                     </div>
 
-                      
                   </div>
 
                   <?php if( isset($_GET['cod']) && $_GET['cod']=='campovazio'){ ?>
@@ -78,10 +76,18 @@
                       Cadastro realizado com sucesso
                     </div>
                   <?php } ?>
+                  
 
-                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  <a href="home.php?" class="btn btn-primary mr-3">voltar</a>
+                  <button type="submit" class="btn btn-success">Cadastrar</button>
+                  
                 </form>
-              
+
+                <?php 
+                  if(isset($_POST['emailCadastro']) &&  $_POST['emailCadastro']== '' || isset($_POST['senhaCadastro']) && $_POST['senhaCadastro'] == ''){
+                    header('Location: #?cod=campovazio');}
+                ?>
+
               </div>
             </div>
           </div>

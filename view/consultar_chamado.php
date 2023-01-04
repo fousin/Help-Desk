@@ -35,13 +35,14 @@
     <title>App Help Desk</title>
 
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <style>
       .card-consultar-chamado {
         padding: 30px 0 0 0;
         width: 100%;
         margin: 0 auto;
       }
+      
     </style>
   </head>
 
@@ -59,7 +60,6 @@
 
     <div class="container">    
       <div class="row">
-
         <div class="card-consultar-chamado">
           <div class="card">
             <div class="card-header">
@@ -67,30 +67,30 @@
             </div>
             
             <div class="card-body">
-
               <?php foreach($chamados as $chamado){ ?>
+
                 <?php
-
                   $chamado_dados = explode('#', $chamado);
-
 					        //não existe detalhes do chamado se ele não estiver completo
                   if(count($chamado_dados) < 3) {
                     continue;
                   }
-
                 ?>
-
                 <div class="card mb-3 bg-light">
-                  <div class="card-body">
-                    <h5 class="card-title"><?= $chamado_dados[1]; ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[2]; ?></h6>
-                    <p class="card-text"><?= $chamado_dados[3]; ?></p>
-
+                  <div class="card-body row">
+                    <div class="col-10">
+                      <h5 class="card-title"><?= $chamado_dados[1]; ?></h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[2]; ?></h6>
+                      <p class="card-text"><?= $chamado_dados[3]; ?></p>
+                    </div>
+                    <div class="col-2">
+                      <button class="btn btn-success"><i class="fas fa-chevron-down"></i></button>
+                      <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                    </div>
                   </div>
                 </div>
 
               <?php } ?>
-
               <div class="row mt-5">
                 <div class="col-6">
                   <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>

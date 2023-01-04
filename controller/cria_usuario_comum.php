@@ -13,8 +13,10 @@
         //fechando arquivo
         fclose($arquivo);
     }
+    
     $cadastro = true;
     $newId = 0;
+
     if($_POST['emailCadastro'] == '' || $_POST['senhaCadastro'] == ''){
         header('Location: ../view/cria_usuario.php?cod=campovazio');
     } else{
